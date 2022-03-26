@@ -1,0 +1,27 @@
+<div class="content">
+
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-7">
+        <div class="content-div">
+          <h1 class="h1-show">
+            <%= @article.title %>
+            <%= link_to edit_article_path(@article) do %>
+            <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class:"text-danger" do%>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+
+          </h1>
+          <hr>
+          <%= @article.content %>
+        </div>
+    </div>
+    <div class="col">
+    </div>
+
+  </div>
+
+</div>

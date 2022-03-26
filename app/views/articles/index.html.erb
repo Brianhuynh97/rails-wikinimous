@@ -1,0 +1,21 @@
+<div class="content">
+
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-7">
+      <% @articles.each do |article| %>
+        <div class="content-div">
+          <h2>
+            <%= link_to article.title, article_path(article) %>
+          </h2>
+          <%= article.content %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col">
+    </div>
+
+  </div>
+
+</div>
